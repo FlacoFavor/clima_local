@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Fondo circular para que se vea bien en Android -->
+  <rect width="512" height="512" rx="100" fill="#007bff"/>
+  
+  <!-- Sol -->
+  <circle cx="180" cy="180" r="60" fill="#FFD700" />
+  <g stroke="#FFD700" stroke-width="12" stroke-linecap="round">
+    <line x1="180" y1="80" x2="180" y2="105" />
+    <line x1="180" y1="255" x2="180" y2="280" />
+    <line x1="80" y1="180" x2="105" y2="180" />
+    <line x1="255" y1="180" x2="280" y2="180" />
+    <line x1="110" y1="110" x2="128" y2="128" />
+    <line x1="232" y1="232" x2="250" y2="250" />
+    <line x1="110" y1="250" x2="128" y2="232" />
+    <line x1="232" y1="128" x2="250" y2="110" />
+  </g>
+
+  <!-- Nube -->
+  <path d="M420 360H175c-33 0-60-27-60-60s27-60 60-60c5-45 45-80 90-80 35 0 65 20 80 50 10-5 20-10 30-10 44 0 80 36 80 80s-36 70-80 80z" fill="white" />
+</svg>
