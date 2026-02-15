@@ -23,7 +23,7 @@
             text-align: center;
         }
         #icono { font-size: 80px; margin: 15px 0; }
-        .temp { font-size: 55px; font-weight: bold; color: #333; }
+        .temp { font-size: 55px; font-weight: bold; color: #def; }
         .desc { color: #666; font-size: 1.2rem; margin-bottom: 20px; }
         .loading { font-style: italic; color: #888; }
         button {
@@ -41,28 +41,7 @@
     transition: transform 0.5s ease;
     animation: float 3s ease-in-out infinite;
 }
-body {
-    /* ... tus otros estilos ... */
-    color: white; /* Hace que todo el texto por defecto sea blanco */
-    transition: background 0.5s ease; /* Para que el cambio de color sea suave */
-}
 
-.card {
-    /* Cambiamos el fondo de la tarjeta a uno semi-transparente o blanco puro */
-    background: rgba(255, 255, 255, 0.9); 
-    color: #333; /* El texto dentro de la tarjeta se queda oscuro para que resalte */
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-    width: 320px;
-    text-align: center;
-}
-
-/* Si prefieres que TODA la tarjeta sea oscura y el texto blanco: */
-.card-dark {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-}
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
@@ -206,19 +185,6 @@ const fondo = (datos.current.weather_code <= 3) ?
     'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)' : // Azul cielo
     'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)'; // Gris tormenta
 document.body.style.background = fondo;
-
-
-// Si la temperatura es baja, ponemos un fondo azul frío, si es alta, uno cálido
-const temp = Math.round(datos.current.temperature_2m);
-if (temp < 15) {
-    document.body.style.background = "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)"; // Azul oscuro
-} else {
-    document.body.style.background = "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"; // Rosa/Naranja cálido
-}
-
-// Forzamos que el texto de la temperatura sea negro si la tarjeta es blanca
-document.getElementById('temp').style.color = "#333";
-document.getElementById('ciudad').style.color = "#222";
 
 }
 
