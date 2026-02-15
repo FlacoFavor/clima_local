@@ -188,6 +188,9 @@ const fondo = (datos.current.weather_code <= 3) ?
     'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)'; // Gris tormenta
 document.body.style.background = fondo;
 
+const ahora = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+document.getElementById('desc').innerHTML += `<br><small>Actualizado: ${ahora}</small>`;
+		
 }
 
 
@@ -217,4 +220,5 @@ document.body.style.background = fondo;
 
 </body>
 </html>
+
 
