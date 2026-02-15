@@ -1,0 +1,16 @@
+{
+  "name": "Mi Clima Local",
+  "short_name": "Clima",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#007bff",
+  "theme_color": "#007bff",
+  "icons": [
+    {
+      "src": "icono.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
